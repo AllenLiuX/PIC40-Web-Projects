@@ -1,0 +1,9 @@
+img{
+    float: left;
+}
+
+@media screen and (max-width: 800px) {
+    p{
+    clear:left;
+    }
+}

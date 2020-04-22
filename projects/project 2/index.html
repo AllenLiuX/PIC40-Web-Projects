@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <title>Vincent's Blog</title>
+</head>
+<body>
+<header>
+    <h1>Vincent's Blog</h1>
+    <h2>My Technical Projects Stories</h2>
+    <nav>
+        <ul>
+            <li><a href="#vshlef" title="vshelf">Story of Virtual Shelf</a></li>
+            <li><a href="#mario" title="Mario">Story of Mario Maze 3D</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <hr>
+    <article id="vshelf">
+        <h3>Team Project: Virtual Shelf</h3>
+        <section>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col" id="th2">Item</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>abc</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>abcd</td>
+                </tr>
+                </tbody>
+            </table>
+            <figure>
+                <img src="search.jpg" width="400" alt="an image of the page of search">
+            </figure>
+            <h4><u>What is does</u></h4>
+                On the <strong>customer</strong> side, one can search a <b>particular store</b> with specific items (we have two separate search bars to do this), and our database will return the matched supermarkets with price, quantity, and post time labeled for those items in reverse chronological order.
+                <br/> Or if you just type in the name of the item that you are looking for / the store that you plan to visit, you can find out the result as well.
+                <br/>Moreover, the returned stores will be displayed on our real-time google map if the user clicks on it, so one could see <i>locations of markets</i> compared with his/her own one and decide which store to go to.
+                <br/>On the <strong>store owner's</strong> side, he/she can load price, quantity, and store name to our database through our “POST” interface.
+                <br/>The data passed in will be automatically stored in our database and will be displayed once a customer requests such information.
+                <br/>User can also upload information that they saw in the stores and people can work together as a community to help each other.
+        </section>
+        <section>
+            <h4><u>How I build it</u></h4>
+            <ul>
+                <li><em>Python</em> as backend: we used Django as our website framework, designed and set up the database using python within the Django framework. </li>
+                <li>We also incorporated Google Maps API to search and display locations on map.</li>
+                <li><em>Html, CSS, Javascript</em> as frontend: we designed the multi-level webpages using HTML. </li>
+                <li>We built the <a href="https://github.com/lzwme/bootstrap-suggest-plugin">autocomplete</a> function for the search bars using Javascript.</li>
+            </ul>
+        </section>
+    </article>
+    <hr>
+    <article id="mario">
+        <h3>Team Project: Mario Maze 3D</h3>
+        <figure>
+            <img src="thirdperson.png" width="400" alt="an image of the beginning scene of the game">
+        </figure>
+        <section>
+            <h4><u>Overview</u></h4>
+            <p>
+                Our maze game allows people to use keystrokes to walk in a 3D maze, in which the player needs to find keys, open gates, and find the exit.
+                <br/>When exploring in the maze, the player will meet moving monsters and obstacles which could possibly wound player.
+                <br/>For each round, the player has three lives, and there is a timer to record how much time the player spent to finish the maze.
+                <br/>There are three perspectives: first-person, third person, and global perspectives, each has different advantages when playing.
+                <br/>Also, sounds are played when the player is performing different actions.
+            </p>
+        </section>
+        <section>
+            <h4><u>Advanced Features</u></h4>
+            <dl>
+                <dt><b>Collision Detection</b></dt>
+                <dd>- Collision detection with walls and obstacles, prevent player entering the wall, and decrease health if the player hit obstacles.</dd>
+                <dt><b>OBJ Models</b></dt>
+                <dd>- 3D models in .obj formats, including Mario character, gates, keys, and flag, are imported with texture mapping and animations.</dd>
+            </dl>
+        </section>
+        <hr/>
+        <form>
+            <fieldset>
+                <p>Which projects do you like best?</p>
+                <p>
+                    <label for="p1">Virtual Shelf</label>
+                    <input type="radio" id="p1" value="'vshelf" name="Scoring"/>
+                    <label for="p2">Mario Maze 3D</label>
+                    <input type="radio" id="p2" value="'mario" name="Scoring"/>
+                </p>
+            </fieldset>
+            <fieldset>
+                <textarea rows="8" cols="250" name="review">Your Review</textarea>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+    </article>
+</main>
+<hr/>
+<footer>
+    <small>
+        <b>This Page</b> is @4/11/2020 by Wenxuan Liu(Vincent).
+    </small>
+</footer>
+</body>
+</html>
