@@ -10,11 +10,6 @@ hr{
     border-color: #f8d7da;
 }
 
-/*body{*/
-/*    background-color: #86cfda;*/
-/*    opacity: 0.8;*/
-/*}*/
-
 #icon1{
     position: absolute;
     right: 30px;
@@ -31,19 +26,21 @@ hr{
 
 
 body{
-    background-image: url("piano.jpg");
+    background-image: url("piano.jpg"); /*  this is the background image under the transparent div*/
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+/*set a div to set the opacity of the background image*/
 .trans{
     background-color: rgba(255,255,255,0.7);
-    /*background-position: relative;*/
     margin-top: -15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 table{
@@ -67,11 +64,11 @@ p{
 
 }
 
+/*Use a div to bound the images together*/
 .triples{
     margin: 20px;
     float: right;
     position: relative;
-    /*left: -100px;*/
     width: 600px;
     height: 350px;
 }
@@ -99,11 +96,6 @@ p{
 
 }
 
-/*img{*/
-/*    position: absolute;*/
-/*    top: 0px;*/
-/*    left: 100px;*/
-/*}*/
 
 form{
     background-color: #FFEFD7b0;
