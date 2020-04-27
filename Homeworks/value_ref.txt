@@ -1,0 +1,4 @@
+At the end of the code, the value of 'y' would be 7, 'z' would be [9,8], and 'obj' would have 'num' be 9 and 'arr' be [9,8].
+First, y would be 7 because y is a number, a primitive variable, which would be passed by value into the function. So although y is passed as i and i has been incremented with 1, it wouldn't change the value of y.
+Second, z would be [9, 8] because z is an array and it is an object. When passed into the function as a, it would pass by reference. Then, in the function, only o.arr is assigned to point to a, without value changes for a. However, after the function, z.pop() deletes the past element 7 in the array, so z would then be [9,8].
+Last, obj is a object and is passed in the function as o by reference. when o.num increment by 1, obj.num also increases by 1. When o.arr = a, o.arr now points to a, which is actually z. Thus, when z becomes [9,8] after the function, obj.arr also becomes [9,8].
