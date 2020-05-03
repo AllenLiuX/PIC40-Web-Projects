@@ -5,12 +5,12 @@ function foo(o, i, a){
 }
 
 let obj={
-    num:7;
-    arr: [1,2,3];
+    num:7,
+    arr: [1,2,3]
 };
 
 let y=7;
-let z={9,8,7};
+let z=[9,8,7];
 foo(obj, y, z);
 z.pop();
 

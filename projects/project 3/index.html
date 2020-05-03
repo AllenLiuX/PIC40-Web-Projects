@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+    <title>Title</title>
+</head>
+<!--use onload to call the function as soon as the page is loaded. -->
+<body onload="greet()">
+<header>
+    <h1>Simple Calculator</h1>
+</header>
+<main>
+    <form>
+        <label for="first">First value: </label>
+        <input type="text" id="first">
+        <div id="options">
+            <label for="plus">+</label>
+            <input type="radio" id="plus" value="plus" name="Signs"><br>
+            <label for="minus">-</label>
+            <input type="radio" id='minus' value="minus" name="Signs"><br>
+            <label for="times">x</label>
+            <input type="radio" id="times" value="times" name="Signs"><br>
+            <label for="divide">&divide;</label>
+            <input type="radio" id="divide" value="divide" name="Signs">
+        </div>
+        <label for="second">Second value: </label>
+        <input type="text" id="second">
+        <input type="button" value="compute" onclick="calculate()">
+    </form>
+    <p id="result">Result: </p>
+</main>
+</body>
+</html>
