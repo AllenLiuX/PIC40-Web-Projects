@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <title>Vincent's Blog</title>
+</head>
+<body>
+<div class="trans">
+<header>
+    <h1>VINCENT LIU</h1>
+    <div>
+        <a href="https://allenliux01.wixsite.com/mrvs"><img id="icon1" src="img/video.png" width="50" alt="video icon"></a>
+        <a href="https://github.com/AllenLiuX/"><img id="icon2" src="img/github.png" width="50" alt="github icon"></a>
+    </div>
+<!--    <h2>My Technical Projects Stories</h2>-->
+<!--    <nav>-->
+<!--        <ul>-->
+<!--            <li><a href="#vshlef" title="vshelf">Story of Virtual Shelf</a></li>-->
+<!--            <li><a href="#mario" title="Mario">Story of Mario Maze 3D</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+</header>
+<main>
+    <hr>
+    <article id="vshelf">
+        <h3>Team Project: Virtual Shelf</h3>
+        <div class="triples">
+            <img class="ho" id="tri1" src="img/stores.jpg" width="400" alt="an image of the page of stores" title="Stores & Map Page">
+            <img class="ho" id="tri2" src="img/post.jpg" width="400" alt="an image of the page of post" title="Post Page">
+            <img class="ho" id="tri3" src="img/search.jpg" width="400" alt="an image of the page of search" title="Search Page">
+        </div>
+        <section>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="th2">Personal Contributions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Django Management</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HTML and javascript implementation</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Search Suggest implementation</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Post page and Search page CSS implementation</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Create-time Database restructure</td>
+                </tr>
+                <!--                <tr>-->
+                <!--                    <td>6</td>-->
+                <!--                    <td>Idea of Post system</td>-->
+                <!--                </tr>-->
+                </tbody>
+            </table>
+            <h4><u>Inspiration</u></h4>
+            <p>
+                The outbreak of coronavirus (COVID-19) has significantly influenced the wellbeing of people and imposed great challenges on societies.
+                The empty shelves at supermarkets are one of the most essential problems. People feel panic buying daily supplies; meanwhile,
+                lots of us are frustrated after waiting for hours and finding out that the good we want just went out of stock.
+            </p>
+            <p>
+                Therefore, our project, Virtual Shelf, aims to keep track of the inventory of supermarkets (e.g. target, ralphs…).
+                We want to update the stock every day (especially for certain goods in shortage, such as sanitizers and toilet paper) so that people could be more informed about current situations.
+                Therefore, we hope that with the help of Virtual Shelf, everyone can minimize the time spent on travelling among stores and stay safe & healthy :)
+            </p>
+            <h4><u>What is does</u></h4>
+            <p>
+                On the <strong>customer</strong> side, one can search a <b>particular store</b> with specific items (we have two separate search bars to do this), and our database will return the matched supermarkets with price, quantity, and post time labeled for those items in reverse chronological order.
+                Or if you just type in the name of the item that you are looking for / the store that you plan to visit, you can find out the result as well.
+                Moreover, the returned stores will be displayed on our real-time google map if the user clicks on it, so one could see <i>locations of markets</i> compared with his/her own one and decide which store to go to.
+            </p>
+            <p>
+                On the <strong>store owner's</strong> side, he/she can load price, quantity, and store name to our database through our “POST” interface.
+                The data passed in will be automatically stored in our database and will be displayed once a customer requests such information.
+                User can also upload information that they saw in the stores and people can work together as a community to help each other.
+            </p>
+        </section>
+        <section>
+            <h4><u>How I build it</u></h4>
+            <ul>
+                <li><em>Python</em> as backend: we used Django as our website framework, designed and set up the database using python within the Django framework. </li>
+                <li>We also incorporated Google Maps API to search and display locations on map.</li>
+                <li><em>Html, CSS, Javascript</em> as frontend: we designed the multi-level webpages using HTML. </li>
+                <li>We built the <a href="https://github.com/lzwme/bootstrap-suggest-plugin">autocomplete</a> function for the search bars using Javascript.</li>
+            </ul>
+        </section>
+    </article>
+    <hr>
+    <article id="mario">
+        <h3>Team Project: Mario Maze 3D</h3>
+        <h4> Play it now at: <a href="https://www.pic.ucla.edu/~vincentliux/Mario/">www.pic.ucla.edu/~vincentliux/Mario/</a></h4>
+        <div class="triples">
+            <img class="ho" id="tri4" src="img/first.png" width="400" alt="an image of the first person perspective of the game">
+            <img class="ho" id="tri5" src="img/global.png" width="400" alt="an image of the global perspective of the game">
+            <img class="ho" id="tri6" src="img/thirdperson.png" width="400" alt="an image of the beginning scene of the game">
+        </div>
+        <section>
+            <h4><u>Overview</u></h4>
+            <p>
+                Our maze game allows people to use keystrokes to walk in a 3D maze, in which the player needs to find keys, open gates, and find the exit.
+                When exploring in the maze, the player will meet moving monsters and obstacles which could possibly wound player.
+                For each round, the player has three lives, and there is a timer to record how much time the player spent to finish the maze.
+            </p>
+            <p>
+                There are three perspectives: first-person, third person, and global perspectives, each has different advantages when playing.
+                Also, sounds are played when the player is performing different actions.
+            </p>
+        </section>
+        <section>
+            <h4><u>Advanced Features</u></h4>
+            <dl>
+                <dt><b>Collision Detection</b></dt>
+                <dd>- Collision detection with walls and obstacles, prevent player entering the wall, and decrease health if the player hit obstacles.</dd>
+                <dt><b>OBJ Models</b></dt>
+                <dd>- 3D models in .obj formats, including Mario character, gates, keys, and flag, are imported with texture mapping and animations.</dd>
+            </dl>
+            <h4><u>Individual Contributions</u></h4>
+            <ul>
+                <li>Wrote the animation for individual obstacle which is constructed by many cubes scaled and translated proportionally by time.</li>
+                <li>Wrote the destination detection method to activate win scene when character goes out of the maze.</li>
+                <li>Drew and wrote the UI interfaces in HTML including the beginning, die, and win scenes.</li>
+                <li>Added the timer, health, and key number UI, and wrote the algorithm to update timer.</li>
+                <li>Modified the obj models import methods, and collected all the models and constructed them into the appropriate textures, proportions and positions. </li>
+                <li>Added music and FX to the game, so that there are corresponding sounds when the character is win, wounded, walking, opening gates, and died.</li>
+            </ul>
+        </section>
+<!--        <hr/>-->
+<!--        <form>-->
+<!--            <fieldset>-->
+<!--                <p>Which projects do you like best?</p>-->
+<!--                <p>-->
+<!--                    <label for="p1">Virtual Shelf</label>-->
+<!--                    <input type="radio" id="p1" value="'vshelf" name="Scoring"/>-->
+<!--                    <label for="p2">Mario Maze 3D</label>-->
+<!--                    <input type="radio" id="p2" value="'mario" name="Scoring"/>-->
+<!--                </p>-->
+<!--            </fieldset>-->
+<!--            <fieldset>-->
+<!--                <textarea rows="8" cols="250" name="review">Your Review</textarea>-->
+<!--            </fieldset>-->
+<!--            <fieldset>-->
+<!--                <input type="submit" value="Submit">-->
+<!--                <input type="reset" value="Reset">-->
+<!--            </fieldset>-->
+<!--        </form>-->
+    </article>
+</main>
+<hr/>
+<footer>
+    <small>
+        <b>This Page</b> is @4/22/2020 by Wenxuan Liu(Vincent).
+    </small>
+</footer>
+</div>
+</body>
+</html>
