@@ -1,0 +1,76 @@
+<!--REMIND:-->
+<!--Please view this website with Safari to see the poll result and use Chrome to see the parallax scrolling. Chrome doesn't load the divs as expected, probably due to the large load of this page.-->
+<!--What I did for this project:-->
+<!--First, my main effort is to create a beautiful poll website relying on CSS design and Javascript interaction.-->
+<!--I made the 3D Parallax Scrolling such that the background image is scolling down with a slower speed compared with other elements on the webpage.-->
+<!--It is realized by using the preserve-3d for transform-style and set overflow-allowed in CSS.-->
+<!--Also, the layouts and colors are well-designed. I made a few CSS animations such that hovering on the title would make the title become bigger, and hovering on the background image would 'lighten' the image with a different opacity.-->
+
+<!--Second, I used Javascript to ask for an input of viewer's favorite color, and correspondingly change the poll result showing in the figure and text.-->
+<!--I used DOM to manipulate the style and innerHTML of the corresponding color, and did a few type coercion between Number and String.-->
+
+<!--Third, this page was initially aimed to use PHP to store the input result into a txt and use JQuery AJAX to read the poll result in the txt.-->
+<!--HOWEVER, I have tried for over an hour to fix the JQuery, but the pic server just cannot load JQuery script by any means (maybe because the page has too many things to load) while my code of JQuery can be used locally and on my own server.-->
+<!--So, I failed to implement this important feature, but can only temporarily use a fixed original poll result written in HTML. I realized that this page may not be complicated enough, but please consider the situation that the JQuery doesn't work on my PIC server... Thank you!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="final.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="final.css">
+    <title>Color Poll</title>
+</head>
+<body onload="poll()">
+<script>
+color = prompt("What is your favorite color?", "").toLowerCase();
+</script>
+<!--<?php-->
+<!--$color="<script>document.writeln(color);</script>";-->
+<!--?>-->
+
+<main>
+    <section class="list-item">
+        <div class="item-image">
+            <img src="color3.jpg">
+        </div>
+        <div class="item-text">
+            <div class="item-title">Hello World, my name is Wenxuan Liu.</div>
+            <div class="item-desc">Your vote has been recorded.<br>Scroll down to see our poll result</div>
+        </div>
+    </section>
+    <section class="content">
+        <h1>What are people's favorite colors?</h1>
+        <div class="result">
+            <div class="color" id="black">Black 10</div><br><br>
+            <div class="color" id="white">White 20</div><br><br>
+            <div class="color" id="yellow">Yellow 15</div><br><br>
+            <div class="color" id="pink">Pink 30</div><br><br>
+            <div class="color" id="blue">Blue 40</div><br><br>
+            <div class="color" id="green">Green 5</div><br><br>
+            <div class="color" id="purple">Purple 10</div><br><br>
+            <div class="color" id="red">Red 25</div><br><br>
+            <div class="color" id="orange">Orange 15</div><br><br>
+        </div>
+        <br><br>
+        <p>
+            REMIND:
+            <br>Please view this website with Safari to see the poll result and use Chrome to see the parallax scrolling. Chrome doesn't load the divs as expected, probably due to the large load of this page.
+            <br><br>What I did for this project:
+            <br>First, my main effort is to create a beautiful poll website relying on CSS design and Javascript interaction.
+            <br>I made the 3D Parallax Scrolling such that the background image is scolling down with a slower speed compared with other elements on the webpage.It is realized by using the preserve-3d for transform-style and set overflow-allowed in CSS.
+            <br>Also, the layouts and colors are well-designed. I made a few CSS animations such that hovering on the title would make the title become bigger, and hovering on the background image would 'lighten' the image with a different opacity.
+            <br>Second, I used Javascript to ask for an input of viewer's favorite color, and correspondingly change the poll result showing in the figure and text.
+            <br>I used DOM to manipulate the style and innerHTML of the corresponding color, and did a few type coercion between Number and String.
+            <br>Third, this page was initially aimed to use PHP to store the input result into a txt and use JQuery AJAX to read the poll result in the txt.
+            <br>HOWEVER, I have tried for over an hour to fix the JQuery, but the pic server just cannot load JQuery script by any means (maybe because the page has too many things to load) while my code of JQuery can be used locally and on my own server.
+            <br>So, I failed to implement this important feature, but can only temporarily use a fixed original poll result written in HTML. I realized that this page may not be complicated enough, but please consider the situation that the JQuery doesn't work on my PIC server... Thank you!
+        </p>
+    </section>
+</main>
+<footer>
+    <b>This Page</b> is @6/6/2020 by Wenxuan Liu(Vincent).
+</footer>
+</body>
+</html>

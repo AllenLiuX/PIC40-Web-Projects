@@ -4,10 +4,11 @@
     session_name('Demo');
     session_start();
     $success = false;
-    if (isset($_GET['email']) and isset($_GET['token'])){
+    if (isset($_GET['email']) and isset($_GET['token'])){   //set in the url
         $username = $_GET['email'];
         $token = $_GET['token'];
         $file = fopen('validation.txt', 'r') or die('could not open and read file');
+        $temp = fopen('temp.txt', 'w');
         while(!feof($file)){
             $line = fgets($file);
             $fields = explode(" ", $line);
@@ -18,7 +19,11 @@
                 fwrite($file2, "$username $password\n");
                 fclose($file2);
             }
+            else{
+                fwrite($temp, $line);   //write all the lines except the target user line to the temp file
+            }
         }
+        rename('temp.txt', 'validation.txt');    //rename the temp file to validation file so that the target user line is 'removed'
     }
 ?>
 <!DOCTYPE html>

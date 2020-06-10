@@ -1,0 +1,6 @@
+red 3
+blue 10
+yellow 4
+pink 15
+black 3
+white 2

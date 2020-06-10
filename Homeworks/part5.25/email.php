@@ -14,7 +14,7 @@
     <input type="text" id='tit' name="title"/><br>
     <label for='con'>Content: </label><br>
     <textarea rows="8" cols="100" id='con' name="message"></textarea><br>
-    <input type='submit' valaue='get'/>
+    <input type='submit' value='Send'/>
 </form>
 <p>
 <?php
