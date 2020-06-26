@@ -1,0 +1,44 @@
+#!/usr/local/bin/php
+<?php
+    session_save_path(dirname(realpath(__FILE__)) . '/sessions/');
+    session_name('Demo');
+    session_start();
+    $success = false;
+    if (isset($_GET['email']) and isset($_GET['token'])){   //set in the url
+        $username = $_GET['email'];
+        $token = $_GET['token'];
+        $file = fopen('validation.txt', 'r') or die('could not open and read file');
+        $temp = fopen('temp.txt', 'w');
+        while(!feof($file)){
+            $line = fgets($file);
+            $fields = explode(" ", $line);
+            if(trim($fields[0]) === $username and trim($fields[2]) === $token){
+                $success = true;
+                $file2 = fopen('accounts.txt', 'a') or die('could not open and read file');
+                $password = trim($fields[1]);
+                fwrite($file2, "$username $password\n");
+                fclose($file2);
+            }
+            else{
+                fwrite($temp, $line);   //write all the lines except the target user line to the temp file
+            }
+        }
+        rename('temp.txt', 'validation.txt');    //rename the temp file to validation file so that the target user line is 'removed'
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+</head>
+<body>
+<main>
+<form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+</form>
+    <?php if($success){ ?>
+        <p>You are registered!</p>
+    <?php } ?>
+</main>
+</body>
+</html>

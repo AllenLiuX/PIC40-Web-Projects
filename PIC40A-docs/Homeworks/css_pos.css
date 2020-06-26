@@ -1,0 +1,22 @@
+/*View the demo on pic.ucla.edu/~vincentliux/Part415   */
+
+p{
+    font-family: serif;
+    font-size: 1.15em;
+    width: 355px;
+    position: absolute;
+    border: 8px solid blue;
+    padding-bottom: 10px;
+    line-height: 120%;
+}
+
+span{
+    text-align: justify;
+    width: 130px;
+    opacity: 0.6;
+    background-color: #F78B8C;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+    z-index: -1;
+}

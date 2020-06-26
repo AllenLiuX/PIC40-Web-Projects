@@ -1,0 +1,8 @@
+When using 'var':
+    the paragraph's innerHTML changes to '11111111111111111111', which is adding 11 for 10 times, each with a little delay.
+    The reason why i is always 11 when executing the script in setTimeout's function is because we initialize i by var and all the calls of '++i' are put onto the call stack since i is directly modified when declared by var.
+    Then, when the setTimeout function is called, the call stack is not empty, so JavaScript runs all the '++i'. So i becomes 11 before calling all the execution in the function of setTimeout. So it prints 11 for 10 times
+
+When using 'let':
+    the paragraph's innerHTML changes to '12345678910', which is sequentially adding i from 1 to 10, each with a little delay.
+    Then reason why all the '++i' didn't be executed before the setTimeout function is that i is not global variable when declared by 'let', and it was actually 'icopy' be used inside the for loop. So '++i' didn't put onto the call stack all at once, and the executions are synchronous for the for loop.
